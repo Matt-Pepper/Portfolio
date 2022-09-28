@@ -6,59 +6,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew's Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Roboto:wght@400;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js"></script>
+    <script src="./js/functions.js"></script>
 </head>
 
 <body>
     <div class="background"></div>
-        <header>
-            <nav class="nav">
-                <ul class="nav__container">
-                    <li class="nav__link"><a onclick="scrollToSection(`home`)">Home</a></li>
-                    <li class="nav__link"><a onclick="scrollToSection(`projects`)">Projects</a></li>
-                    <li class="nav__link"><a onclick="scrollToSection(`skills`)">Skills</a></li>
-                    <li class="nav__link"><a onclick="scrollToSection(`about-me`)">About Me</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="container">
-                <section id="home">
-                    <p>Section introcducing myself quickly, some images etc</p>
-                </section>
-                <section>
-                    <a id="projects">
-                        <h2>Projects</h2>
-                    </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quibusdam consequatur eius eos culpa odit, placeat pariatur tenetur sequi ducimus ab ut itaque impedit totam. Porro qui magnam aperiam eos!
-                    Modi, asperiores. Iste facilis atque modi voluptas accusamus ducimus nemo, ipsa asperiores quas, culpa unde expedita optio delectus, corrupti animi voluptate exercitationem porro perspiciatis consectetur doloremque? Officiis tenetur minus culpa.
-                    Fugiat, cum, debitis cupiditate eveniet animi soluta, natus distinctio cumque qui ea a. Numquam quidem quo facilis expedita reiciendis reprehenderit! Voluptate non blanditiis exercitationem facilis voluptatum molestias hic, ducimus fugiat!
-                    In temporibus vel nulla sapiente, eligendi necessitatibus culpa eos ullam velit vero ut dolorem sed similique omnis laudantium ea excepturi consequuntur harum cumque. Enim accusantium tempora modi ad magni distinctio!
-                    Temporibus inventore rem, odio consequuntur, veritatis animi soluta, fugiat at suscipit ab nobis est tempore nemo. Voluptatem harum, sint dicta possimus libero beatae, quasi eum explicabo, delectus quo culpa minus!</p>
-                </section>
-                <section>
-                    <a id="skills">
-                        <h2>Skills</h2>
-                    </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quibusdam consequatur eius eos culpa odit, placeat pariatur tenetur sequi ducimus ab ut itaque impedit totam. Porro qui magnam aperiam eos!
-                    Modi, asperiores. Iste facilis atque modi voluptas accusamus ducimus nemo, ipsa asperiores quas, culpa unde expedita optio delectus, corrupti animi voluptate exercitationem porro perspiciatis consectetur doloremque? Officiis tenetur minus culpa.
-                    Fugiat, cum, debitis cupiditate eveniet animi soluta, natus distinctio cumque qui ea a. Numquam quidem quo facilis expedita reiciendis reprehenderit! Voluptate non blanditiis exercitationem facilis voluptatum molestias hic, ducimus fugiat!
-                    In temporibus vel nulla sapiente, eligendi necessitatibus culpa eos ullam velit vero ut dolorem sed similique omnis laudantium ea excepturi consequuntur harum cumque. Enim accusantium tempora modi ad magni distinctio!
-                    Temporibus inventore rem, odio consequuntur, veritatis animi soluta, fugiat at suscipit ab nobis est tempore nemo. Voluptatem harum, sint dicta possimus libero beatae, quasi eum explicabo, delectus quo culpa minus!</p>
-                </section>
-                <section>
-                    <a id="about-me">
-                        <h2>About Me</h2>
-                    </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quibusdam consequatur eius eos culpa odit, placeat pariatur tenetur sequi ducimus ab ut itaque impedit totam. Porro qui magnam aperiam eos!
-                    Modi, asperiores. Iste facilis atque modi voluptas accusamus ducimus nemo, ipsa asperiores quas, culpa unde expedita optio delectus, corrupti animi voluptate exercitationem porro perspiciatis consectetur doloremque? Officiis tenetur minus culpa.
-                    Fugiat, cum, debitis cupiditate eveniet animi soluta, natus distinctio cumque qui ea a. Numquam quidem quo facilis expedita reiciendis reprehenderit! Voluptate non blanditiis exercitationem facilis voluptatum molestias hic, ducimus fugiat!
-                    In temporibus vel nulla sapiente, eligendi necessitatibus culpa eos ullam velit vero ut dolorem sed similique omnis laudantium ea excepturi consequuntur harum cumque. Enim accusantium tempora modi ad magni distinctio!
-                    Temporibus inventore rem, odio consequuntur, veritatis animi soluta, fugiat at suscipit ab nobis est tempore nemo. Voluptatem harum, sint dicta possimus libero beatae, quasi eum explicabo, delectus quo culpa minus!</p>
-                </section>
-            </div>
-        </main>
+    <header>
+        <nav class="nav">
+            <ul class="nav__container">
+                <li class="nav__link"><a onclick="scrollToSection(`home`)">Home</a></li>
+                <li class="nav__link"><a onclick="scrollToSection(`projects`)">Projects</a></li>
+                <li class="nav__link"><a onclick="scrollToSection(`skills`)">Skills</a></li>
+                <li class="nav__link"><a onclick="scrollToSection(`about-me`)">About Me</a></li>
+                <li class="nav__link"><a onclick="scrollToSection(`contact-me`)">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <section class="hero">
+                <div id="home" class="hero__container">
+                    <h1 class="hero__heading">Matthew Pepper</h1>
+                    <h2 class="hero__sub-heading">Junior Fullstack Web-Developer</h2>
+                </div>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__carat">
+                    
+                    <path id="path"
+                        d="M5.16108 10.0731C4.45387 9.2649 5.02785 8 6.1018 8H17.898C18.972 8 19.5459 9.2649 18.8388 10.0731L13.3169 16.3838C12.6197 17.1806 11.3801 17.1806 10.6829 16.3838L5.16108 10.0731ZM6.65274 9.5L11.8118 15.396C11.9114 15.5099 12.0885 15.5099 12.1881 15.396L17.3471 9.5H6.65274Z"
+                       stroke="#ffffff"/>
+                </svg>
+            </section>
+            <section class="content">
+                <div id="projects">
+                    <h2>Projects</h2>
+                </div>
+                <p>These are a few of the projects I have completed.</p>
+            </section>
+            <section class="content">
+                <div id="skills">
+                    <h2>Skills</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quibusdam consequatur eius eos
+                    culpa odit, placeat pariatur tenetur sequi ducimus ab ut itaque impedit totam. Porro qui magnam
+                    aperiam eos!
+                    Modi, asperiores. Iste facilis atque modi voluptas accusamus ducimus nemo, ipsa asperiores quas,
+                    culpa unde expedita optio delectus, corrupti animi voluptate exercitationem porro perspiciatis
+                    consectetur doloremque? Officiis tenetur minus culpa.
+                    Fugiat, cum, debitis cupiditate eveniet animi soluta, natus distinctio cumque qui ea a. Numquam
+                    quidem quo facilis expedita reiciendis reprehenderit! Voluptate non blanditiis exercitationem
+                    facilis voluptatum molestias hic, ducimus fugiat!
+                    In temporibus vel nulla sapiente, eligendi necessitatibus culpa eos ullam velit vero ut dolorem sed
+                    similique omnis laudantium ea excepturi consequuntur harum cumque. Enim accusantium tempora modi ad
+                    magni distinctio!
+                    Temporibus inventore rem, odio consequuntur, veritatis animi soluta, fugiat at suscipit ab nobis est
+                    tempore nemo. Voluptatem harum, sint dicta possimus libero beatae, quasi eum explicabo, delectus quo
+                    culpa minus!</p>
+            </section>
+            <section class="content">
+                <div id="about-me">
+                    <h2>About Me</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quibusdam consequatur eius eos
+                    culpa odit, placeat pariatur tenetur sequi ducimus ab ut itaque impedit totam. Porro qui magnam
+                    aperiam eos!
+                    Modi, asperiores. Iste facilis atque modi voluptas accusamus ducimus nemo, ipsa asperiores quas,
+                    culpa unde expedita optio delectus, corrupti animi voluptate exercitationem porro perspiciatis
+                    consectetur doloremque? Officiis tenetur minus culpa.
+                    Fugiat, cum, debitis cupiditate eveniet animi soluta, natus distinctio cumque qui ea a. Numquam
+                    quidem quo facilis expedita reiciendis reprehenderit! Voluptate non blanditiis exercitationem
+                    facilis voluptatum molestias hic, ducimus fugiat!
+                    In temporibus vel nulla sapiente, eligendi necessitatibus culpa eos ullam velit vero ut dolorem sed
+                    similique omnis laudantium ea excepturi consequuntur harum cumque. Enim accusantium tempora modi ad
+                    magni distinctio!
+                    Temporibus inventore rem, odio consequuntur, veritatis animi soluta, fugiat at suscipit ab nobis est
+                    tempore nemo. Voluptatem harum, sint dicta possimus libero beatae, quasi eum explicabo, delectus quo
+                    culpa minus!</p>
+            </section>
+            <section class="content">
+                <div id="contact-me">
+                    <h2>Contact Me</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quibusdam consequatur eius eos
+                    culpa odit, placeat pariatur tenetur sequi ducimus ab ut itaque impedit totam. Porro qui magnam
+                    aperiam eos!
+                    Modi, asperiores. Iste facilis atque modi voluptas accusamus ducimus nemo, ipsa asperiores quas,
+                    culpa unde expedita optio delectus, corrupti animi voluptate exercitationem porro perspiciatis
+                    consectetur doloremque? Officiis tenetur minus culpa.
+                    Fugiat, cum, debitis cupiditate eveniet animi soluta, natus distinctio cumque qui ea a. Numquam
+                    quidem quo facilis expedita reiciendis reprehenderit! Voluptate non blanditiis exercitationem
+                    facilis voluptatum molestias hic, ducimus fugiat!
+                    In temporibus vel nulla sapiente, eligendi necessitatibus culpa eos ullam velit vero ut dolorem sed
+                    similique omnis laudantium ea excepturi consequuntur harum cumque. Enim accusantium tempora modi ad
+                    magni distinctio!
+                    Temporibus inventore rem, odio consequuntur, veritatis animi soluta, fugiat at suscipit ab nobis est
+                    tempore nemo. Voluptatem harum, sint dicta possimus libero beatae, quasi eum explicabo, delectus quo
+                    culpa minus!</p>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <li>test</li>
+    </footer>
 
 </body>
 
