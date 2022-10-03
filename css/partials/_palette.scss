@@ -3,11 +3,18 @@ $animation-color-1: #aad576;
 $animation-color-2: #73a942;
 $animation-color-3: #2f7d03;
 
-// background colour of the nav bar
-$nav-background-color: #BED6EB;
-
 // background colour for the content blocks
-$background-color: #e4ebdc;
+$background-color: hsl(88, 27%, 89%);
 
 // background colour of the footer
 $footer-background-color: #143601;
+
+// background colour of the nav bar
+$nav-background-color: #307c03;
+$nav-hover-button: #87b86b;
+$nav-text-color: $background-color;
+
+// project tab colors
+$project-active: $background-color;
+$project-hover: #bbe095;
+$project-inactive: #87b86b;

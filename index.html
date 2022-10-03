@@ -12,47 +12,136 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Roboto:wght@400;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js"></script>
-    <script src="./js/functions.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/functions.js" defer></script>
+    <script src="https://kit.fontawesome.com/2322775333.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="background"></div>
     <header>
-        <nav class="nav">
-            <ul class="nav__container">
-                <li class="nav__link"><a onclick="scrollToSection(`home`)">Home</a></li>
-                <li class="nav__link"><a onclick="scrollToSection(`projects`)">Projects</a></li>
-                <li class="nav__link"><a onclick="scrollToSection(`skills`)">Skills</a></li>
-                <li class="nav__link"><a onclick="scrollToSection(`about-me`)">About Me</a></li>
-                <li class="nav__link"><a onclick="scrollToSection(`contact-me`)">Contact Me</a></li>
-            </ul>
-        </nav>
+        <div class="nav">
+            <nav class="nav__container">
+                <div class="nav__menu nav__menu--media">
+                    <button class="nav__button" onclick="scrollToSection(`home`)">Home</button>
+                    <button class="nav__button" onclick="scrollToSection(`projects`)">Projects</button>
+                    <button class="nav__button" onclick="scrollToSection(`skills`)">Skills</button>
+                    <button class="nav__button" onclick="scrollToSection(`about-me`)">About Me</button>
+                    <button class="nav__button" onclick="scrollToSection(`contact-me`)">Contact Me</button>
+                </div>
+                <button class="nav__hamburger" onclick="toggleNavMenu()"><i class="fa-solid fa-bars"></i></button>
+            </nav>
+
+        </div>
     </header>
-    <main>
+    <main onclick="closeNav()">
+
         <div class="container">
-            <section class="hero">
-                <div id="home" class="hero__container">
+            <section class="hero" id="home">
+                <div class="hero__container">
                     <h1 class="hero__heading">Matthew Pepper</h1>
                     <h2 class="hero__sub-heading">Junior Fullstack Web-Developer</h2>
+                    <div>
+                        <p id="quotes" class="hero__quote"></p>
+                        <p id="quoteAuthor"></p>
+                    </div>
                 </div>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__carat">
-                    
-                    <path id="path"
-                        d="M5.16108 10.0731C4.45387 9.2649 5.02785 8 6.1018 8H17.898C18.972 8 19.5459 9.2649 18.8388 10.0731L13.3169 16.3838C12.6197 17.1806 11.3801 17.1806 10.6829 16.3838L5.16108 10.0731ZM6.65274 9.5L11.8118 15.396C11.9114 15.5099 12.0885 15.5099 12.1881 15.396L17.3471 9.5H6.65274Z"
-                       stroke="#ffffff"/>
-                </svg>
+                <div>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__carat"
+                        onclick="scrollToSection(`projects`)">
+
+                        <path id="path"
+                            d="M5.16108 10.0731C4.45387 9.2649 5.02785 8 6.1018 8H17.898C18.972 8 19.5459 9.2649 18.8388 10.0731L13.3169 16.3838C12.6197 17.1806 11.3801 17.1806 10.6829 16.3838L5.16108 10.0731ZM6.65274 9.5L11.8118 15.396C11.9114 15.5099 12.0885 15.5099 12.1881 15.396L17.3471 9.5H6.65274Z"
+                            stroke="#6effc3" />
+                    </svg>
+                </div>
             </section>
-            <section class="content">
-                <div id="projects">
-                    <h2>Projects</h2>
+            <section class="content projects" id="projects">
+                <h2 class="content__heading">Projects</h2>
+                <div class="projects__tab-container">
+                    <button class="projects__tab projects__tab--active" id="projectTab1"
+                        onclick="selectProjectTab(1)">Project 1</button>
+                    <button class="projects__tab" id="projectTab2" onclick="selectProjectTab(2)">Project 2</button>
+                    <button class="projects__tab" id="projectTab3" onclick="selectProjectTab(3)">Project 3</button>
+                    <button class="projects__tab" id="projectTab4" onclick="selectProjectTab(4)">Project 4</button>
+
                 </div>
-                <p>These are a few of the projects I have completed.</p>
+                <div class="projects__container projects__container--active" id="project1">
+                    <div class="project__card">
+                        <div class="projects__gallery">
+                            <img src="https://picsum.photos/id/1002/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/1002/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/1002/400/300?blur=2" class="projects__image">
+                        </div>
+                        <p class="projects__info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil eaque ad, laudantium,
+                            dolor provident eos sunt et quos maxime maiores incidunt perspiciatis perferendis. Doloribus
+                            nemo saepe exercitationem tempora nostrum.
+                        </p>
+                        <div class="projects__link-holder">
+                            <div><a href="" class="live">Live <i class="fa-solid fa-right-to-bracket"></i></a></div>
+                            <div><a href="" class="github">Github Repo <i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__container" id="project2">
+                    <div class="project__card">
+                        <div class="projects__gallery">
+                            <img src="https://picsum.photos/id/1025/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/1025/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/1025/400/300?blur=2" class="projects__image">
+                        </div>
+                        <p class="projects__info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil eaque ad, laudantium,
+                            dolor provident eos sunt et quos maxime maiores incidunt perspiciatis perferendis. Doloribus
+                            nemo saepe exercitationem tempora nostrum.
+                        </p>
+                        <div class="projects__link-holder">
+                            <div><a href="" class="live">Live <i class="fa-solid fa-right-to-bracket"></i></a></div>
+                            <div><a href="" class="github">Github Repo <i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__container" id="project3">
+                    <div class="project__card">
+                        <div class="projects__gallery">
+                            <img src="https://picsum.photos/id/1/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/1/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/1/400/300?blur=2" class="projects__image">
+                        </div>
+                        <p class="projects__info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil eaque ad, laudantium,
+                            dolor provident eos sunt et quos maxime maiores incidunt perspiciatis perferendis. Doloribus
+                            nemo saepe exercitationem tempora nostrum.
+                        </p>
+                        <div class="projects__link-holder">
+                            <div><a href="" class="live">Live <i class="fa-solid fa-right-to-bracket"></i></a></div>
+                            <div><a href="" class="github">Github Repo <i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__container" id="project4">
+                    <div class="project__card">
+                        <div class="projects__gallery">
+                            <img src="https://picsum.photos/id/0/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/0/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/0/400/300?blur=2" class="projects__image">
+                        </div>
+                        <p class="projects__info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil eaque ad, laudantium,
+                            dolor provident eos sunt et quos maxime maiores incidunt perspiciatis perferendis. Doloribus
+                            nemo saepe exercitationem tempora nostrum.
+                        </p>
+                        <div class="projects__link-holder">
+                            <div><a href="" class="live">Live <i class="fa-solid fa-right-to-bracket"></i></a></div>
+                            <div><a href="" class="github">Github Repo <i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
-            <section class="content">
-                <div id="skills">
-                    <h2>Skills</h2>
-                </div>
+            <section class="content" id="skills">
+                <h2>Skills</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quibusdam consequatur eius eos
                     culpa odit, placeat pariatur tenetur sequi ducimus ab ut itaque impedit totam. Porro qui magnam
                     aperiam eos!
@@ -69,30 +158,23 @@
                     tempore nemo. Voluptatem harum, sint dicta possimus libero beatae, quasi eum explicabo, delectus quo
                     culpa minus!</p>
             </section>
-            <section class="content">
-                <div id="about-me">
-                    <h2>About Me</h2>
+            <section class="content" id="about-me">
+                <h2>About Me</h2>
+                <div class="about-me">
+                    <img src="/static/images/IMG_20221003_234354 (1).jpg" alt="">
+                    <p>
+                        I'm Matthew, a passionate junior web-developer with a love for creating reactive websites and webapps.
+                        <br><br>
+                        My goal with web-developing is to aquire the skills to craft something my daughter would be proud of.
+                        <br><br>
+                        
+
+                        
+                    </p>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quibusdam consequatur eius eos
-                    culpa odit, placeat pariatur tenetur sequi ducimus ab ut itaque impedit totam. Porro qui magnam
-                    aperiam eos!
-                    Modi, asperiores. Iste facilis atque modi voluptas accusamus ducimus nemo, ipsa asperiores quas,
-                    culpa unde expedita optio delectus, corrupti animi voluptate exercitationem porro perspiciatis
-                    consectetur doloremque? Officiis tenetur minus culpa.
-                    Fugiat, cum, debitis cupiditate eveniet animi soluta, natus distinctio cumque qui ea a. Numquam
-                    quidem quo facilis expedita reiciendis reprehenderit! Voluptate non blanditiis exercitationem
-                    facilis voluptatum molestias hic, ducimus fugiat!
-                    In temporibus vel nulla sapiente, eligendi necessitatibus culpa eos ullam velit vero ut dolorem sed
-                    similique omnis laudantium ea excepturi consequuntur harum cumque. Enim accusantium tempora modi ad
-                    magni distinctio!
-                    Temporibus inventore rem, odio consequuntur, veritatis animi soluta, fugiat at suscipit ab nobis est
-                    tempore nemo. Voluptatem harum, sint dicta possimus libero beatae, quasi eum explicabo, delectus quo
-                    culpa minus!</p>
             </section>
-            <section class="content">
-                <div id="contact-me">
-                    <h2>Contact Me</h2>
-                </div>
+            <section class="content" id="contact-me">
+                <h2>Contact Me</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quibusdam consequatur eius eos
                     culpa odit, placeat pariatur tenetur sequi ducimus ab ut itaque impedit totam. Porro qui magnam
                     aperiam eos!
@@ -112,7 +194,7 @@
         </div>
     </main>
     <footer class="footer">
-        <li>test</li>
+        <p>test</p>
     </footer>
 
 </body>
