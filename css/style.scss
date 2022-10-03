@@ -339,6 +339,43 @@ main {
 	}
 }
 
+.skills {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__icons {
+		display: flex;
+		flex-direction: column;
+
+		& i {
+			font-size: 60px;
+		}
+
+		& img {
+			width: 60px;
+		}
+
+		& div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 30px;
+			width: 100px;
+		}
+
+		& span {
+			padding-top: 10px;
+		}
+	}
+}
+
 .about-me {
 	display: flex;
 	
@@ -352,8 +389,6 @@ main {
 		min-width: 320px;
 		opacity: .8;
 
-		//flex-grow: 1;
-
 	}
 	& p {
 		margin-top: 60px;
@@ -361,11 +396,68 @@ main {
 	}
 }
 
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+
+	&__details {
+		padding-top: 50px;
+		display: flex;
+		width: 100%;
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+
+	&__tooltip {
+		visibility: hidden;
+		border-radius: 10px;
+		padding: 10px;
+		margin-top: 40px;
+		background-color: rgba(0, 0, 0, 0.7);
+		color: palette.$contact-font-hover;
+
+		&--visible {
+			visibility: visible;
+		}
+	}
+
+	& i {
+		font-size: 100px;
+	}
+
+	& a {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100px;
+		color: palette.$contact-font;
+
+		&:hover {
+			color: palette.$contact-font-hover;
+		}
+
+	}
+
+	& h3 {
+		font-size: 7vw;
+	}
+}
+
 .footer {
 	background-color: palette.$footer-background-color;
-	height: 40px;
+	height: fit-content;
 	padding-bottom: 0px;
-	color: white;
+	color: palette.$footer-font;
+
+	& p {
+		margin: 0px;
+		text-align: center;
+		padding: 15px;
+	}
 }
 
 

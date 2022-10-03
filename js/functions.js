@@ -54,5 +54,24 @@ function selectProjectTab(projectNum) {
 
 		document.getElementById(`projectTab${projectNum}`).classList.add('projects__tab--active');
 	});
+}
 
+function copyToClipboard() {
+	const email = `matthew.g.pepper@gmail.com`;
+	const tooltip = document.querySelector(".contact__tooltip");
+
+	navigator.clipboard.writeText(email).then(
+		async () => {
+			//success
+			tooltip.classList.add("contact__tooltip--visible");
+			await new Promise(r => setTimeout(r, 2000));
+			tooltip.classList.remove("contact__tooltip--visible");
+
+
+		},
+		() => {
+			// failed
+			console.log("Failed to copy to clipboard.");
+		}
+	)
 }

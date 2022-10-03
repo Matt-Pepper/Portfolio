@@ -8,6 +8,7 @@ $background-color: hsl(88, 27%, 89%);
 
 // background colour of the footer
 $footer-background-color: #143601;
+$footer-font: $background-color;
 
 // background colour of the nav bar
 $nav-background-color: #307c03;
@@ -18,3 +19,7 @@ $nav-text-color: $background-color;
 $project-active: $background-color;
 $project-hover: #bbe095;
 $project-inactive: #87b86b;
+
+// contact logo colors
+$contact-font: $footer-background-color;
+$contact-font-hover: #bbe095;
