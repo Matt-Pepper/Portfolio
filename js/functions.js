@@ -64,7 +64,7 @@ function copyToClipboard() {
 		async () => {
 			//success
 			tooltip.classList.add("contact__tooltip--visible");
-			await new Promise(r => setTimeout(r, 2000));
+			await new Promise(r => setTimeout(r, 2500));
 			tooltip.classList.remove("contact__tooltip--visible");
 
 
