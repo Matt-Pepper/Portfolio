@@ -1,12 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Matthew's Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Roboto:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+    <script src="./js/functions.js" defer></script>
+    <script src="https://kit.fontawesome.com/2322775333.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <div class="background"></div>
+    <header>
+        <div class="nav">
+            <nav class="nav__container">
+                <div class="nav__menu nav__menu--media">
+                    <button class="nav__button" onclick="scrollToSection(`home`)">Home</button>
+                    <button class="nav__button" onclick="scrollToSection(`projects`)">Projects</button>
+                    <button class="nav__button" onclick="scrollToSection(`skills`)">Skills</button>
+                    <button class="nav__button" onclick="scrollToSection(`about-me`)">About Me</button>
+                    <button class="nav__button" onclick="scrollToSection(`contact-me`)">Contact Me</button>
+                </div>
+                <button class="nav__hamburger" onclick="toggleNavMenu()"><i class="fa-solid fa-bars"></i></button>
+            </nav>
+
+        </div>
+    </header>
+    <main onclick="closeNav()">
+
+        <div class="container">
+            <section class="hero" id="home">
+                <div class="hero__container">
+                    <h1 class="hero__heading">Matthew Pepper</h1>
+                    <h2 class="hero__sub-heading">Junior Fullstack Web-Developer</h2>
+                    <div>
+                        <p id="quotes" class="hero__quote"></p>
+                        <p id="quoteAuthor"></p>
+                    </div>
+                </div>
+                <div>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__carat"
+                        onclick="scrollToSection(`projects`)">
+
+                        <path id="path"
+                            d="M5.16108 10.0731C4.45387 9.2649 5.02785 8 6.1018 8H17.898C18.972 8 19.5459 9.2649 18.8388 10.0731L13.3169 16.3838C12.6197 17.1806 11.3801 17.1806 10.6829 16.3838L5.16108 10.0731ZM6.65274 9.5L11.8118 15.396C11.9114 15.5099 12.0885 15.5099 12.1881 15.396L17.3471 9.5H6.65274Z"
+                            stroke="#6effc3" />
+                    </svg>
+                </div>
+            </section>
+            <section class="content projects" id="projects">
+                <h2 class="content__heading">Projects</h2>
+                <div class="projects__tab-container">
+                    <button class="projects__tab projects__tab--active" id="projectTab1"
+                        onclick="selectProjectTab(1)">Project 1</button>
+                    <button class="projects__tab" id="projectTab2" onclick="selectProjectTab(2)">Project 2</button>
+                    <button class="projects__tab" id="projectTab3" onclick="selectProjectTab(3)">Project 3</button>
+                    <button class="projects__tab" id="projectTab4" onclick="selectProjectTab(4)">Project 4</button>
+
+                </div>
+                <div class="projects__container projects__container--active" id="project1">
+                    <div class="project__card">
+                        <div class="projects__gallery">
+                            <img src="https://picsum.photos/id/1002/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/1002/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/1002/400/300?blur=2" class="projects__image">
+                        </div>
+                        <p class="projects__info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil eaque ad, laudantium,
+                            dolor provident eos sunt et quos maxime maiores incidunt perspiciatis perferendis. Doloribus
+                            nemo saepe exercitationem tempora nostrum.
+                        </p>
+                        <div class="projects__link-holder">
+                            <div><a href="" class="live"><i class="fa-solid fa-right-to-bracket"></i> Live</a></div>
+                            <div><a href="" class="github"><i class="fa-brands fa-github"></i> Github Repo</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__container" id="project2">
+                    <div class="project__card">
+                        <div class="projects__gallery">
+                            <img src="https://picsum.photos/id/1025/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/1025/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/1025/400/300?blur=2" class="projects__image">
+                        </div>
+                        <p class="projects__info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil eaque ad, laudantium,
+                            dolor provident eos sunt et quos maxime maiores incidunt perspiciatis perferendis. Doloribus
+                            nemo saepe exercitationem tempora nostrum.
+                        </p>
+                        <div class="projects__link-holder">
+                            <div><a href="" class="live"><i class="fa-solid fa-right-to-bracket"></i> Live</a></div>
+                            <div><a href="" class="github"><i class="fa-brands fa-github"></i> Github Repo</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__container" id="project3">
+                    <div class="project__card">
+                        <div class="projects__gallery">
+                            <img src="https://picsum.photos/id/1/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/1/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/1/400/300?blur=2" class="projects__image">
+                        </div>
+                        <p class="projects__info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil eaque ad, laudantium,
+                            dolor provident eos sunt et quos maxime maiores incidunt perspiciatis perferendis. Doloribus
+                            nemo saepe exercitationem tempora nostrum.
+                        </p>
+                        <div class="projects__link-holder">
+                            <div><a href="" class="live"><i class="fa-solid fa-right-to-bracket"></i> Live</a></div>
+                            <div><a href="" class="github"><i class="fa-brands fa-github"></i> Github Repo</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__container" id="project4">
+                    <div class="project__card">
+                        <div class="projects__gallery">
+                            <img src="https://picsum.photos/id/0/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/0/400/300?blur=2" class="projects__image">
+                            <img src="https://picsum.photos/id/0/400/300?blur=2" class="projects__image">
+                        </div>
+                        <p class="projects__info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil eaque ad, laudantium,
+                            dolor provident eos sunt et quos maxime maiores incidunt perspiciatis perferendis. Doloribus
+                            nemo saepe exercitationem tempora nostrum.
+                        </p>
+                        <div class="projects__link-holder">
+                            <div><a href="" class="live"><i class="fa-solid fa-right-to-bracket"></i> Live</a></div>
+                            <div><a href="" class="github"><i class="fa-brands fa-github"></i> Github Repo</a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="content" id="skills">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <div class="skills__content">
+                        <h3>Frontend</h3>
+                        <div class="skills__icons">
+                            <div><i class="fa-brands fa-html5"></i><span>HTML 5</span></div>
+                            <div><i class="fa-brands fa-css3"></i><span>CSS 3</span></div>
+                            <div><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+                            <div><i class="fa-brands fa-sass"></i><span>Sass</span></div>
+                            <div><i class="fa-brands fa-react"></i><span>React</span></div>
+                        </div>
+                    </div>
+                    <div class="skills__content">
+                        <h3>Backend</h3>
+                        <div class="skills__icons">
+                            <div><i class="fa-brands fa-java"></i><span>Java</span></div>
+                            <div><i class="fa-solid fa-leaf"></i><span>Spring</span></div>
+                            <div><i class="fa-brands fa-node-js"></i><span>Node-js</span></div>
+                            <div><i class="fa-solid fa-database"></i><span>SQL</span></div>
+                            <div><img src="/static/images/firebase.svg"><span>Firebase</span></div>
+                            
+                        </div>
+                    </div>
+                    <div class="skills__content">
+                        <h3>Tools</h3>
+                        <div class="skills__icons">
+                            <div><i class="fa-brands fa-git"></i><span>Git</span></div>
+                            <div><i class="fa-brands fa-github"></i><span>Github</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content" id="about-me">
+                <h2>About Me</h2>
+                <div class="about-me">
+                    <img src="/static/images/IMG_20221003_234354 (1).jpg" alt="">
+                    <p>
+                        I'm Matthew, a passionate junior web-developer with a love for creating reactive websites and webapps.
+                        <br><br>
+                        My goal with web-developing is to aquire the skills to craft something my daughter would be proud of.
+                        <br><br>
+                        
+
+                        
+                    </p>
+                </div>
+            </section>
+            <section class="content" id="contact-me">
+                <h2>Contact Me</h2>
+                <div class="contact">
+                    <h3>Please Reach Out</h3>
+                    <div class="contact__details">
+                        <a href="https://github.com/Matt-Pepper">
+                            <i class="fa-brands fa-square-github"></i>
+                            <p>Github</p>
+                        </a>
+                        <a onclick="copyToClipboard()">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>Email</p> 
+                        </a>
+                        <a href="https://www.linkedin.com/in/matthew-pepper-922636215/">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <p>LinkedIn</p>
+                        </a>
+                    </div>
+                    <span class="contact__tooltip">Email copied to clipboard.</span>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Email: <span id="email">matthew.g.pepper@gmail.com</span></p>
+        <p>© 2022 Matthew Pepper</p>
+    </footer>
+
 </body>
+
 </html>

@@ -1,0 +1,46 @@
+@use "./devices";
+
+@mixin media($min, $max) {
+    @media only screen and (min-width: $min ) and (max-width: $max) {
+        @content;
+    }
+    
+}
+
+@mixin min-size {
+    @include media(devices.$min, devices.$sm) {
+        @content;
+    }
+}
+
+@mixin phone-landscape-size {
+    @include media((devices.$sm + 1), devices.$md) {
+        @content;
+    }
+}
+
+@mixin tablet-size {
+    @include media((devices.$md + 1), devices.$lg) {
+        @content;
+    }
+}
+
+@mixin desktop-size {
+    @include media((devices.$lg + 1), devices.$xl){
+        @content;
+    }
+}
+
+@mixin widescreen-size {
+    @include media((devices.$xl + 1), devices.$xxl) {
+        @content;
+    }
+}
+
+@mixin max-size {
+    @include media((devices.$xxl + 1), (devices.$xxl + 5000)) {
+        @content;
+    }
+}
+
+

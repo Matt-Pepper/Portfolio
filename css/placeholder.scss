@@ -1,0 +1,211 @@
+
+
+
+
+
+
+
+
+
+
+
+@use "./partials/palette";
+@use "./partials/mixins";
+@use "./partials/typography.scss";
+@use "./partials/animations";
+
+html,
+body,
+h1 {
+	margin: 0px;
+	padding: 0px;
+}
+
+body, button {
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Merriweather", serif;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+}
+
+h2,
+h3 {
+	//font-size: 1.96rem;
+	margin: 0px;
+}
+
+.background {
+	@include animations.background;
+}
+
+%shadow {
+	box-shadow: 5px 10px 5px 5px #00000099;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	display: flex;
+	justify-content: space-around;
+
+	&__button {
+		cursor: pointer;
+		font-size: 1.5rem;
+		font-weight: 900;
+		text-shadow: 3px 3px 2px #23477070;
+		flex-grow: 1;
+		border: none;
+		background-color: palette.$nav-background-color;
+		transition: all .1s;
+		border-left: 1px solid rgba(0, 0, 0, 0.6);
+		padding: 5px;
+
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+
+.container {
+	width: 90vw;
+}
+
+.hero {
+	margin-top: 50px;
+	background: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: fit-content;
+	justify-content: space-between;
+	min-height: 95vh;
+
+	&__container {
+		background-color: palette.$background-color;
+		height: fit-content;
+		text-align: center;
+		padding: 45px 20px 20px 20px;
+		@extend %shadow;
+		@extend .container;
+	}
+
+	&__heading {
+		font-size: 6rem;
+	}
+
+	&__carat {
+		width: 150px;
+		fill: black;
+		transition: all 540ms;
+		cursor: pointer;
+		@include animations.carat;
+
+		&:hover {
+			fill: #ffffff;
+			animation: none;
+			stroke-width: 0px;
+			transform: rotate(360deg);
+		}
+	}
+}
+
+.content {
+	background-color: palette.$background-color;
+	min-height: 82vh;
+	height: fit-content;
+	margin-bottom: 60px;
+	padding: 30px;
+	@extend %shadow;
+
+	&__heading {
+		width: 100%;
+	}
+}
+
+.projects {
+	display: flex;
+	flex-direction: column;
+	&__container {
+	}
+
+	&__tab-container {
+		padding-top: 10px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-grow: 0;
+		
+		& button:first-of-type {
+			border-radius: 15px 0px 0px 0px;
+		}
+		& button:last-of-type {
+			border-radius: 0px 15px 0px 0px;
+		}
+
+	}
+	
+	&__tab {
+		padding: 15px;
+		flex-grow: 1;
+		border: none;
+		background-color: white;
+		
+
+		&:hover {
+			background-color: #9fdfca;
+			
+		}
+
+		&--active {
+			background-color: palette.$background-color;
+			flex-grow: 2;
+		}
+
+	}
+
+	&__image {
+		//min width for tablet 820px wide 650px
+		//min width for iphone 375px wide 277.5px
+
+		//2 images side by side for >1300px wide screens
+		//2 images cutoff 1100px wide
+		// for < 1100px min width is 100% 
+		// maybe cutoff for force landscape when too small?
+		// force landscape when width < height && width < 350
+
+
+		min-width: 100%;
+		width: 40vw;
+		max-width: 100%;
+		height: auto;
+	}
+
+	&__info {
+		flex-grow: 2;
+	}
+
+	&__gallery {
+		display: flex;
+		flex-flow: row wrap;
+		gap: 10px;
+	}
+}
+
+.footer {
+	background-color: palette.$footer-background-color;
+	height: 40px;
+	padding-bottom: 0px;
+	color: white;
+}
