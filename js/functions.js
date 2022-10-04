@@ -75,3 +75,18 @@ function copyToClipboard() {
 		}
 	)
 }
+
+
+let scrolling = false;
+
+document.addEventListener('scroll', (e) => {
+
+  if (!scrolling) {
+    window.requestAnimationFrame(() => {
+      closeNav();
+      scrolling = false;
+    });
+
+    scrolling = true;
+  }
+});
