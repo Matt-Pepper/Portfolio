@@ -43,16 +43,18 @@ function closeNav() {
 }
 
 function selectProjectTab(projectNum) {
-	projectsTabs.forEach( (item) => {
-		item.classList.remove('projects__container--active');
+	projectsTabs.forEach((item) => {
+		item.classList.remove("projects__container--active");
 
-		document.getElementById(`project${projectNum}`).classList.add('projects__container--active');
+		document
+			.getElementById(`project${projectNum}`)
+			.classList.add("projects__container--active");
 	});
 
-	projectTabBar.forEach( (item) => {
-		item.classList.remove('projects__tab--active');
+	projectTabBar.forEach((item) => {
+		item.classList.remove("projects__tab--active");
 
-		document.getElementById(`projectTab${projectNum}`).classList.add('projects__tab--active');
+		document.getElementById(`projectTab${projectNum}`).classList.add("projects__tab--active");
 	});
 }
 
@@ -64,29 +66,25 @@ function copyToClipboard() {
 		async () => {
 			//success
 			tooltip.classList.add("contact__tooltip--visible");
-			await new Promise(r => setTimeout(r, 2500));
+			await new Promise((r) => setTimeout(r, 2500));
 			tooltip.classList.remove("contact__tooltip--visible");
-
-
 		},
 		() => {
 			// failed
 			console.log("Failed to copy to clipboard.");
 		}
-	)
+	);
 }
-
 
 let scrolling = false;
 
-document.addEventListener('scroll', (e) => {
+document.addEventListener("scroll", (e) => {
+	if (!scrolling) {
+		window.requestAnimationFrame(() => {
+			closeNav();
+			scrolling = false;
+		});
 
-  if (!scrolling) {
-    window.requestAnimationFrame(() => {
-      closeNav();
-      scrolling = false;
-    });
-
-    scrolling = true;
-  }
+		scrolling = true;
+	}
 });
