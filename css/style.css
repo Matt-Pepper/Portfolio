@@ -48,7 +48,7 @@ body, button {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   body, button {
     font-size: 16px;
   }
@@ -65,7 +65,7 @@ main {
   align-items: center;
   flex-direction: column;
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   main {
     align-items: flex-start;
   }
@@ -86,7 +86,7 @@ main {
 .content, .hero__container {
   box-shadow: 5px 10px 5px 5px rgba(0, 0, 0, 0.6);
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   .content, .hero__container {
     box-shadow: 0px 11px 3px 0px rgba(0, 0, 0, 0.6);
   }
@@ -100,7 +100,7 @@ main {
   position: fixed;
   top: 0;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 .nav__container {
   display: flex;
@@ -118,7 +118,7 @@ main {
   flex-direction: column;
   border-bottom: 1px solid black;
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   .nav__menu--media {
     flex-direction: column;
     border-bottom: 1px solid black;
@@ -138,7 +138,7 @@ main {
   background-color: #87b86b;
   color: black;
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   .nav__hamburger {
     display: block;
   }
@@ -159,7 +159,7 @@ main {
   padding: 5px;
   color: hsl(88deg, 27%, 89%);
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   .nav__button {
     border-left: none;
     border-bottom: 2px solid black;
@@ -173,7 +173,7 @@ main {
 .container, .hero__container {
   width: 90vw; /* change for min !!!!!!!!! important */
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   .container, .hero__container {
     width: 100%;
   }
@@ -189,7 +189,7 @@ main {
   justify-content: space-between;
   min-height: 95vh;
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   .hero {
     width: 100%;
   }
@@ -200,7 +200,7 @@ main {
   text-align: center;
   padding: 45px 20px 20px 20px;
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   .hero__container {
     padding: 45px 0px 20px 0px;
   }
@@ -208,12 +208,12 @@ main {
 .hero__heading {
   font-size: 6rem;
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   .hero__heading {
     font-size: 10vw;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   .hero__sub-heading {
     font-size: 5vw;
   }
@@ -251,7 +251,6 @@ main {
 
 .content {
   background-color: hsl(88deg, 27%, 89%);
-  min-height: 82vh;
   height: fit-content;
   margin-bottom: 60px;
   padding: 30px;
@@ -259,7 +258,7 @@ main {
 .content__heading {
   width: 100%;
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   .content {
     max-width: 90%;
     padding: 5%;
@@ -341,23 +340,32 @@ main {
 
 .skills {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 .skills__content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 100%;
+  padding-top: 20px;
+}
+.skills__content:nth-child(even) {
+  background-image: linear-gradient(rgba(67, 102, 87, 0.1) 0 0);
+  border-radius: 5px;
 }
 .skills__icons {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 .skills__icons i {
   font-size: 60px;
+  color: #87b86b;
 }
 .skills__icons img {
   width: 60px;
+  color: #87b86b;
 }
 .skills__icons div {
   display: flex;
@@ -368,12 +376,14 @@ main {
 }
 .skills__icons span {
   padding-top: 10px;
+  color: hsl(98deg, 35%, 40%);
+  font-weight: 700;
 }
 
 .about-me {
   display: flex;
 }
-@media only screen and (min-width: 320px) and (max-width: 639px) {
+@media only screen and (min-width: 0px) and (max-width: 639px) {
   .about-me {
     flex-direction: column;
   }
@@ -385,6 +395,12 @@ main {
   min-width: 320px;
   opacity: 0.8;
 }
+@media only screen and (min-width: 0px) and (max-width: 639px) {
+  .about-me img {
+    min-width: 10px;
+    width: 100%;
+  }
+}
 .about-me p {
   margin-top: 60px;
   word-wrap: normal;
@@ -395,7 +411,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
 }
 .contact__details {
   padding-top: 50px;
@@ -418,7 +433,13 @@ main {
 .contact i {
   font-size: 100px;
 }
+@media only screen and (min-width: 0px) and (max-width: 639px) {
+  .contact i {
+    font-size: 30vw;
+  }
+}
 .contact a {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -429,7 +450,7 @@ main {
 .contact a:hover {
   color: #bbe095;
 }
-.contact h3 {
+.contact h2 {
   font-size: 7vw;
 }
 

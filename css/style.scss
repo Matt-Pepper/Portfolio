@@ -67,7 +67,7 @@ main {
 	position: fixed;
 	top: 0;
 	z-index: 1;
-	opacity: .9;
+	opacity: .95;
 
 	&__container {
 		display: flex;
@@ -232,7 +232,6 @@ main {
 
 .content {
 	background-color: palette.$background-color;
-	min-height: 82vh;
 	height: fit-content;
 	margin-bottom: 60px;
 	padding: 30px;
@@ -341,25 +340,35 @@ main {
 
 .skills {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
 
+	
 	&__content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		min-width: 100%;
+		padding-top: 20px;
+		&:nth-child(even) {
+			background-image: linear-gradient(rgba(67, 102, 87, 0.1) 0 0);
+			border-radius: 5px;
+		}
 	}
 
 	&__icons {
 		display: flex;
-		flex-direction: column;
+		flex-flow: row wrap;
+		justify-content: center;
 
 		& i {
 			font-size: 60px;
+			color: #87b86b;
 		}
 
 		& img {
 			width: 60px;
+			color: #87b86b;
 		}
 
 		& div {
@@ -372,6 +381,8 @@ main {
 
 		& span {
 			padding-top: 10px;
+			color: hsl(98, 35%, 40%);
+			font-weight: 700;
 		}
 	}
 }
@@ -389,6 +400,11 @@ main {
 		min-width: 320px;
 		opacity: .8;
 
+		@include mixins.min-size {
+			min-width: 10px;
+			width: 100%;
+		}
+
 	}
 	& p {
 		margin-top: 60px;
@@ -401,7 +417,6 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 80vh;
 
 	&__details {
 		padding-top: 50px;
@@ -426,9 +441,13 @@ main {
 
 	& i {
 		font-size: 100px;
+		@include mixins.min-size{
+			font-size: 30vw;
+		}
 	}
 
 	& a {
+		cursor: pointer;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -442,7 +461,7 @@ main {
 
 	}
 
-	& h3 {
+	& h2 {
 		font-size: 7vw;
 	}
 }
