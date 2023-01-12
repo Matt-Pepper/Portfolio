@@ -44,12 +44,14 @@ h3 {
   padding: 0px;
 }
 
-body, button {
+body,
+button {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
 }
 @media only screen and (min-width: 0px) and (max-width: 639px) {
-  body, button {
+  body,
+button {
     font-size: 16px;
   }
 }
@@ -101,6 +103,7 @@ main {
   top: 0;
   z-index: 1;
   opacity: 0.95;
+  user-select: none;
 }
 .nav__container {
   display: flex;
@@ -130,7 +133,7 @@ main {
   height: 40px;
   display: none;
   width: 60px;
-  color: hsl(88deg, 27%, 89%);
+  color: #ebf7e8;
   border: none;
   background-color: #307c03;
 }
@@ -157,7 +160,7 @@ main {
   transition: all 0.3s ease;
   border-left: 2px solid rgba(0, 0, 0, 0.6);
   padding: 5px;
-  color: hsl(88deg, 27%, 89%);
+  color: #ebf7e8;
 }
 @media only screen and (min-width: 0px) and (max-width: 639px) {
   .nav__button {
@@ -195,7 +198,7 @@ main {
   }
 }
 .hero__container {
-  background-color: hsl(88deg, 27%, 89%);
+  background-color: #ebf7e8;
   height: fit-content;
   text-align: center;
   padding: 45px 20px 20px 20px;
@@ -250,7 +253,7 @@ main {
 }
 
 .content {
-  background-color: hsl(88deg, 27%, 89%);
+  background-color: #ebf7e8;
   height: fit-content;
   margin-bottom: 60px;
   padding: 30px;
@@ -282,6 +285,7 @@ main {
   justify-content: space-between;
   flex-grow: 0;
   max-width: 100%;
+  user-select: none;
 }
 .projects__tab-container button:first-of-type {
   border-radius: 15px 0px 0px 0px;
@@ -300,15 +304,16 @@ main {
   background-color: #bbe095;
 }
 .projects__tab--active {
-  background-color: hsl(88deg, 27%, 89%);
+  background-color: #ebf7e8;
   pointer-events: none;
 }
 .projects__image {
   width: 100%;
   max-height: 600px;
-  max-width: 800px;
   height: auto;
   margin: 5px;
+  object-fit: contain;
+  flex-grow: 1;
 }
 @media only screen and (min-width: 1281px) and (max-width: 1536px) {
   .projects__image {
@@ -329,6 +334,9 @@ main {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-end;
+}
+.projects__link-holder {
+  user-select: none;
 }
 .projects__link-holder a {
   color: #307c03;
@@ -411,6 +419,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 .contact__details {
   padding-top: 50px;
@@ -458,7 +467,7 @@ main {
   background-color: #143601;
   height: fit-content;
   padding-bottom: 0px;
-  color: hsl(88deg, 27%, 89%);
+  color: #ebf7e8;
 }
 .footer p {
   margin: 0px;

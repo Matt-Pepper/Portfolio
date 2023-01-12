@@ -28,8 +28,8 @@
             <nav class="nav__container">
                 <div class="nav__menu nav__menu--media">
                     <button class="nav__button" onclick="scrollToSection(`home`)">Home</button>
-                    <button class="nav__button" onclick="scrollToSection(`about-me`)">About Me</button>
                     <button class="nav__button" onclick="scrollToSection(`skills`)">Skills</button>
+                    <button class="nav__button" onclick="scrollToSection(`about-me`)">About Me</button>
                     <button class="nav__button" onclick="scrollToSection(`projects`)">Projects</button>
                     <button class="nav__button" onclick="scrollToSection(`contact-me`)">Contact Me</button>
                 </div>
@@ -52,30 +52,12 @@
                 </div>
                 <div>
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__carat"
-                        onclick="scrollToSection(`about-me`)">
+                        onclick="scrollToSection(`skills`)">
 
                         <path id="path"
                             d="M5.16108 10.0731C4.45387 9.2649 5.02785 8 6.1018 8H17.898C18.972 8 19.5459 9.2649 18.8388 10.0731L13.3169 16.3838C12.6197 17.1806 11.3801 17.1806 10.6829 16.3838L5.16108 10.0731ZM6.65274 9.5L11.8118 15.396C11.9114 15.5099 12.0885 15.5099 12.1881 15.396L17.3471 9.5H6.65274Z"
                             stroke="#6effc3" />
                     </svg>
-                </div>
-            </section>
-
-            <section class="content" id="about-me">
-                <h2>About Me</h2>
-                <div class="about-me">
-                    <img src="./static/images/IMG_20221003_234354 (1).jpg" alt="">
-                    <p>
-                        I'm Matthew, a passionate junior web-developer with a love for creating reactive websites and
-                        webapps.
-                        <br><br>
-                        My goal with web-developing is to aquire the skills to craft something my daughter would be
-                        proud of.
-                        <br><br>
-
-
-
-                    </p>
                 </div>
             </section>
 
@@ -113,85 +95,163 @@
                 </div>
             </section>
 
+            <section class="content" id="about-me">
+                <h2>About Me</h2>
+                <div class="about-me">
+                    <img src="./static/images/IMG_20221003_234354 (1).jpg" alt="">
+                    <p>
+                        I'm Matthew, a passionate junior web-developer with a love for creating reactive websites and
+                        webapps.
+                        <br><br>
+                        My goal with web-developing is to aquire the skills to craft something my daughter would be
+                        proud of.
+                        <br><br>
+
+
+
+                    </p>
+                </div>
+            </section>
+
+
             <section class="content projects" id="projects">
                 <h2 class="content__heading">Projects</h2>
                 <div class="projects__tab-container">
                     <button class="projects__tab projects__tab--active" id="projectTab1"
-                        onclick="selectProjectTab(1)">Project 1</button>
-                    <button class="projects__tab" id="projectTab2" onclick="selectProjectTab(2)">Project 2</button>
-                    <button class="projects__tab" id="projectTab3" onclick="selectProjectTab(3)">Project 3</button>
-                    <button class="projects__tab" id="projectTab4" onclick="selectProjectTab(4)">Project 4</button>
+                        onclick="selectProjectTab(1)">E-Shop</button>
+                    <button class="projects__tab" id="projectTab2" onclick="selectProjectTab(2)">Fake OS</button>
+                    <button class="projects__tab" id="projectTab3" onclick="selectProjectTab(3)">Google Books
+                        API</button>
+                    <button class="projects__tab" id="projectTab4" onclick="selectProjectTab(4)">Minesweeper</button>
 
                 </div>
                 <div class="projects__container projects__container--active" id="project1">
                     <div class="project__card">
                         <div class="projects__gallery">
-                            <img src="https://picsum.photos/id/1002/400/300?blur=2" class="projects__image">
-                            <img src="https://picsum.photos/id/1002/400/300?blur=2" class="projects__image">
-                            <img src="https://picsum.photos/id/1002/400/300?blur=2" class="projects__image">
+                            <img src="https://github.com/Matt-Pepper/e-Shop/blob/master/src/assets/screenshot.PNG?raw=true"
+                                class="projects__image">
+                            <img src="https://github.com/Matt-Pepper/e-Shop/blob/master/src/assets/cart.PNG?raw=true"
+                                class="projects__image">
+                            <img src="https://github.com/Matt-Pepper/e-Shop/blob/master/src/assets/storepage.PNG?raw=true"
+                                class="projects__image">
                         </div>
                         <p class="projects__info">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil eaque ad, laudantium,
-                            dolor provident eos sunt et quos maxime maiores incidunt perspiciatis perferendis. Doloribus
-                            nemo saepe exercitationem tempora nostrum.
+                            This e-commerce website was built using React on the frontend and Firestore as the database.
+                            <br>
+                            <br>
+                            This was a fun project to work on because of the challenges of how to store the items in the
+                            file based database.
+                            <br>
+                            In it's current form this website has no user accounts so the shopping
+                            cart is shared with all visitors.
+                            <br>
+                            <br>
+                            If I was to change anything it would be adding a page with authentication to create new
+                            items, and also adding a working cart system so that every user has their own cart.
                         </p>
                         <div class="projects__link-holder">
-                            <div><a href="" class="live"><i class="fa-solid fa-right-to-bracket"></i> Live</a></div>
-                            <div><a href="" class="github"><i class="fa-brands fa-github"></i> Github Repo</a></div>
+                            <div><a href="https://matt-pepper.github.io/e-Shop/" class="live"><i
+                                        class="fa-solid fa-right-to-bracket"></i> Live</a></div>
+                            <div><a href="https://github.com/Matt-Pepper/e-Shop" class="github"><i
+                                        class="fa-brands fa-github"></i> Github Repo</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="projects__container" id="project2">
                     <div class="project__card">
                         <div class="projects__gallery">
-                            <img src="https://picsum.photos/id/1025/400/300?blur=2" class="projects__image">
-                            <img src="https://picsum.photos/id/1025/400/300?blur=2" class="projects__image">
-                            <img src="https://picsum.photos/id/1025/400/300?blur=2" class="projects__image">
+                            <img src="https://github.com/Matt-Pepper/fakeOS/blob/master/static/images/screenshot.PNG?raw=true"
+                                class="projects__image">
+                            <img src="https://github.com/Matt-Pepper/fakeOS/blob/master/static/images/quiz.PNG?raw=true"
+                                class="projects__image">
+                            <img src="https://github.com/Matt-Pepper/fakeOS/blob/master/static/images/startmenu.PNG?raw=true"
+                                class="projects__image">
                         </div>
                         <p class="projects__info">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil eaque ad, laudantium,
-                            dolor provident eos sunt et quos maxime maiores incidunt perspiciatis perferendis. Doloribus
-                            nemo saepe exercitationem tempora nostrum.
+                            This website was made to look like the Windows95 operating system, I used HTML, SCSS,
+                            Javascript and JQuery.
+                            <br>
+                            I made use of HTML templates so that the windows would be reuseable, the window is a
+                            template that can be set up to have any content pretty easily.
+                            <br>
+                            <br>
+                            I really enjoyed this project because I got to learn about templates and how they can be
+                            used to have reuseable HTML that can hold data after being drawn to the page.
+                            <br>
+                            <br>
+                            The way I designed this website, was so that new "programs" could be created by appending
+                            the content template to a window.
+                            <br>
+                            I would like to add to this is the ability to minimize a window to the taskbar, and also
+                            when a icon on the taskbar is clicked that the corresponding window will become focused.
                         </p>
                         <div class="projects__link-holder">
-                            <div><a href="" class="live"><i class="fa-solid fa-right-to-bracket"></i> Live</a></div>
-                            <div><a href="" class="github"><i class="fa-brands fa-github"></i> Github Repo</a></div>
+                            <div><a href="https://matt-pepper.github.io/fakeOS/" class="live"><i
+                                        class="fa-solid fa-right-to-bracket"></i> Live</a></div>
+                            <div><a href="https://github.com/Matt-Pepper/fakeOS" class="github"><i
+                                        class="fa-brands fa-github"></i> Github Repo</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="projects__container" id="project3">
                     <div class="project__card">
                         <div class="projects__gallery">
-                            <img src="https://picsum.photos/id/1/400/300?blur=2" class="projects__image">
-                            <img src="https://picsum.photos/id/1/400/300?blur=2" class="projects__image">
-                            <img src="https://picsum.photos/id/1/400/300?blur=2" class="projects__image">
+                            <img src="https://github.com/Matt-Pepper/google-books-search/blob/master/public/images/homescreen.PNG?raw=true"
+                                class="projects__image">
+                            <img src="https://github.com/Matt-Pepper/google-books-search/blob/master/public/images/screenshot.PNG?raw=true"
+                                class="projects__image">
+                            <img src="https://github.com/Matt-Pepper/google-books-search/blob/master/public/images/pages.PNG?raw=true"
+                                class="projects__image">
                         </div>
                         <p class="projects__info">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil eaque ad, laudantium,
-                            dolor provident eos sunt et quos maxime maiores incidunt perspiciatis perferendis. Doloribus
-                            nemo saepe exercitationem tempora nostrum.
+                            This website was created using React and acts as a frontend for the Google Books API, this
+                            project was pretty straight-forward to get connected.
+                            <br>
+                            The challenges were getting multi page to work, if I was to do this project again I would
+                            implement infinite scrolling to avoid having to wrestle with the API as much.
                         </p>
                         <div class="projects__link-holder">
-                            <div><a href="" class="live"><i class="fa-solid fa-right-to-bracket"></i> Live</a></div>
-                            <div><a href="" class="github"><i class="fa-brands fa-github"></i> Github Repo</a></div>
+                            <div><a href="https://matt-pepper.github.io/google-books-search/" class="live"><i
+                                        class="fa-solid fa-right-to-bracket"></i> Live</a></div>
+                            <div><a href="https://github.com/Matt-Pepper/google-books-search" class="github"><i
+                                        class="fa-brands fa-github"></i> Github Repo</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="projects__container" id="project4">
                     <div class="project__card">
                         <div class="projects__gallery">
-                            <img src="https://picsum.photos/id/0/400/300?blur=2" class="projects__image">
-                            <img src="https://picsum.photos/id/0/400/300?blur=2" class="projects__image">
-                            <img src="https://picsum.photos/id/0/400/300?blur=2" class="projects__image">
+                            <img src="https://github.com/Matt-Pepper/minesweeper-project/blob/master/images/image1.PNG?raw=true"
+                                class="projects__image">
+                            <img src="https://github.com/Matt-Pepper/minesweeper-project/blob/master/images/image2.PNG?raw=true"
+                                class="projects__image">
+                            <img src="https://github.com/Matt-Pepper/minesweeper-project/blob/master/images/image4.PNG?raw=true"
+                                class="projects__image">
                         </div>
                         <p class="projects__info">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nihil eaque ad, laudantium,
-                            dolor provident eos sunt et quos maxime maiores incidunt perspiciatis perferendis. Doloribus
-                            nemo saepe exercitationem tempora nostrum.
+                            This project is a Java console application, This was the biggest project I have created
+                            using Java which was fun to learn.
+                            <br>
+                            <br>
+                            To get Minesweeper to work I needed to print the board to the screen, and also get use input
+                            for the size of the game and what move to make.
+                            <br>
+                            Once I had that implemented I needed to make sure the bombs would be randomized and the
+                            squares would have the correct content.
+                            Lastly I added all the game logic so the game would win and lose at the correct game state.
+                            <br>
+                            <br>
+                            As an extra I made it so a users first move would always not be a bomb, I also made it so
+                            when a user selected a square with no bombs around it all squares with no bombs would be
+                            revealed up to the closet squares with numbers.
+                            <br>
+                            <br>
+                            I really enjoyed creating this game because I needed to think through the project in a
+                            different way compared to building a website.
                         </p>
                         <div class="projects__link-holder">
-                            <div><a href="" class="live"><i class="fa-solid fa-right-to-bracket"></i> Live</a></div>
-                            <div><a href="" class="github"><i class="fa-brands fa-github"></i> Github Repo</a></div>
+                            <div><a href="https://github.com/Matt-Pepper/minesweeper-project" class="github"><i
+                                        class="fa-brands fa-github"></i> Github Repo</a></div>
                         </div>
                     </div>
                 </div>
